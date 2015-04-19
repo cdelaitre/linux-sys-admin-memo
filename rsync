@@ -1,5 +1,8 @@
-pull links : hosta <= hostb
+# pull links : host a <= b
 rsync -l -a hostb::pathb .
 
-push links : hosta => hostc
+# push links : host a => c
 rsync -l -a patha hostc::pathc
+
+# Number of files to transfer : host a => b
+NBFTT=`rsync --dry-run --stats patha hostb::pathb | grep 'Number of files transferred:' | cut -d' ' -f5`
