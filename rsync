@@ -1,0 +1,5 @@
+pull links : hosta <= hostb
+rsync -l -a hostb::pathb .
+
+push links : hosta => hostc
+rsync -l -a patha hostc::pathc
