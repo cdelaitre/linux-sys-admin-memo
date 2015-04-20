@@ -1,10 +1,7 @@
 # Docker
 ## Requirements
 - Linux Kernel >= 2.6.32-431
-- Install epel repo
-```bash
-yum install http://mirror.pnl.gov/epel/6/i386/epel-release-6-8.noarch.rpm
-```
+- Install [epel repo](epel.md)
 
 ## Installation (centos6)
 ```bash
