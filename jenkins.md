@@ -31,6 +31,7 @@ pathmunge /produits/ant/bin
 
 ## Maven 3.2.5
 - Installation
+
  ```bash
 TARGET=/produits/
 mkdir -p  $TARGET
@@ -41,6 +42,7 @@ mv apache-maven-3.2.5 $TARGET
 cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
+
 - Configuration
  - Set **maven path**
 
@@ -76,6 +78,7 @@ baseurl=http://pkg.jenkins-ci.org/redhat
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins-ci
 ```
+
 - Import key
  ```bash
 rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
