@@ -21,9 +21,8 @@ cd $TARGET
 ln -s apache-ant-1.9.4 ant
 ```
 - Configuration
- - Set `ant path`
-  - Create **/etc/profile.d/ant.sh**
-  ```
+ - Set **ant path**: create `/etc/profile.d/ant.sh`
+ ```
 pathmunge /produits/ant/bin
 ```
 
@@ -40,14 +39,12 @@ cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
 - Configuration
- - Set `maven path`
-  - Create **/etc/profile.d/mvn.sh**
-  ```
+ - Set **maven path**: create `/etc/profile.d/mvn.sh`
+ ```
 pathmunge /produits/maven/bin
 ```
- - Set `proxy`
-  - Edit **/produits/maven/conf/settings.xml**
-  ```
+ - Set **proxy**: edit `/produits/maven/conf/settings.xml`
+ ```
 <proxy>
   <id>proxy-corp</id>
   <active>true</active>
@@ -59,8 +56,7 @@ pathmunge /produits/maven/bin
 ```
 
 ## Jenkins repo
-- Add jenkins repo
- - Create **/etc/yum.repos.d/jenkins.repo**
+- Add **jenkins repo**: create `/etc/yum.repos.d/jenkins.repo`
  ```
 [jenkins]
 name=Jenkins
@@ -90,8 +86,7 @@ yum update jenkins
 ```
 
 # Optional
-- Add firewall nat redirect 80 to 8080
- - Edit **/etc/sysconfig/iptables**
+- Add **firewall nat redirect** 80 to 8080: edit `/etc/sysconfig/iptables`
  ```
 *filter
 ...
