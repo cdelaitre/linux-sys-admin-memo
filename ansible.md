@@ -1,20 +1,26 @@
 # ANSIBLE
+
 ## Requirements
 - disable rpmforge extra repo
 - if python-paramiko.noarch 0:1.7.6-1.el6.rfx installed => remove it
 ```bash
 yum remove python-paramiko
 ```
-## Installation
+
+## Installation (centos6)
 ```bash
 yum install ansible
+```
+```
 ---> Package ansible.noarch 0:1.8.4-1.el6 will be installed
 ---> Package python-paramiko.noarch 0:1.7.5-2.1.el6 will be installed
 ```
 ## Check
 ```bash
 ansible --version
- [WARNING]: The version of gmp you have installed has a known issue regarding
+```
+```
+[WARNING]: The version of gmp you have installed has a known issue regarding
 timing vulnerabilities when used with pycrypto. If possible, you should update
 it (i.e. yum update gmp).
 
@@ -23,25 +29,27 @@ ansible 1.8.4
 ```
 
 ## Client Configuration
-- hostname:ansibleclient
-- ip:192.168.1.2
+- *Assume*
+ - hostname:ansibleclient
+ - ip:192.168.1.2
 
-- create user:
+- **create ansible user**
 ```bash
 useradd ansible
 passwd ansible
 ```
 
-- /etc/sudoers
+- Add ansible rights: modify **/etc/sudoers**
 ```
 Defaults    !requiretty
 ansible         ALL=(ALL)       NOPASSWD: ALL
 ```
 
 ## Server Configuration
-- hostname:ansiblemaster
+- *Assume*
+ - hostname:ansiblemaster
 
-- create user,key:
+- **create ansible user,key and copy to client**
 ```bash
 useradd ansible
 su - ansible
@@ -49,12 +57,12 @@ ssh-keygen -t rsa -C "ansible@ansiblemaster"
 ssh-copy-id ansibleclient
 ```
 
-- /etc/sudoers
+- Add ansible rights: modify **/etc/sudoers**
 ```
 Defaults    !requiretty
 ```
 
-- /etc/ansible/hosts
+- Add environment variables: modify **/etc/ansible/hosts**
 ```
 [env:vars]
 ansible_ssh_user=ansible
