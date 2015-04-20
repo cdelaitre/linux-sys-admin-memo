@@ -4,13 +4,13 @@
 
 ## Java 1.7
 - Installation
-```bash
+ ```bash
 yum install java-1.7.0-openjdk-devel
 ```
 
 ## Ant 1.9.4
 - Installation
-```bash
+ ```bash
 TARGET=/produits/
 mkdir -p  $TARGET
 cd /tmp
@@ -22,10 +22,11 @@ ln -s apache-ant-1.9.4 ant
 ```
 
 - Configuration
-Set **ant path**
 
-Edit `/etc/profile.d/ant.sh`
-```
+ - Set **ant path**
+
+ Edit `/etc/profile.d/ant.sh`
+ ```
 pathmunge /produits/ant/bin
 ```
 
@@ -68,6 +69,7 @@ pathmunge /produits/maven/bin
 ```
 
 ## Jenkins repo
+
 - Add **jenkins repo**
 
  Create `/etc/yum.repos.d/jenkins.repo`
@@ -80,22 +82,26 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins-ci
 ```
 
 - Import key
+
 ```bash
 rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
 
 # Jenkins installation
+
 ```bash
 yum install jenkins
 ```
 
 # Start
+
 ```bash
 chkconfig jenkins on
 service jenkins start
 ```
 
 # Update
+
 ```bash
 yum update jenkins
 ```
@@ -104,8 +110,8 @@ yum update jenkins
 
 - Add **firewall nat redirect** 80 to 8080
  
-Edit `/etc/sysconfig/iptables`
-```
+ Edit `/etc/sysconfig/iptables`
+ ```
 *filter
 ...
 # allow Jenkins
