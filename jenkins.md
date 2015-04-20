@@ -40,14 +40,16 @@ cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
 - Configuration
-Set **maven path**:
-
-Create `/etc/profile.d/mvn.sh`
-```
+ - Set **maven path**
+ 
+ Create `/etc/profile.d/mvn.sh`
+ ```
 pathmunge /produits/maven/bin
 ```
 
-Set **proxy**: edit `/produits/maven/conf/settings.xml`
+ - Set **http proxy**
+
+ Edit `/produits/maven/conf/settings.xml`
  ```
 <proxy>
   <id>proxy-corp</id>
