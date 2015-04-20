@@ -22,8 +22,7 @@ ln -s apache-ant-1.9.4 ant
 ```
 
 - Configuration
-Set **ant path**
-Edit `/etc/profile.d/ant.sh`
+Set **ant path**: edit `/etc/profile.d/ant.sh`
 ```
 pathmunge /produits/ant/bin
 ```
@@ -41,15 +40,12 @@ cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
 - Configuration
-
-Set **maven path**
- Create `/etc/profile.d/mvn.sh`
- ```
+Set **maven path**: create `/etc/profile.d/mvn.sh`
+```
 pathmunge /produits/maven/bin
 ```
 
-Set **proxy**
- Edit `/produits/maven/conf/settings.xml`
+Set **proxy**: edit `/produits/maven/conf/settings.xml`
  ```
 <proxy>
   <id>proxy-corp</id>
