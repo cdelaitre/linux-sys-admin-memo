@@ -19,7 +19,7 @@ ln -s apache-ant-1.9.4 ant
 ```
 - Configuration
  - ant path: create **/etc/profile.d/ant.sh**
-```
+ ```
 pathmunge /produits/ant/bin
 ```
 ## Maven 3.2.5
@@ -37,8 +37,8 @@ ln -s apache-maven-3.2.5 maven
 - Configuration
  - maven path: create **/etc/profile.d/mvn.sh**
  ```
- pathmunge /produits/maven/bin
- ```
+pathmunge /produits/maven/bin
+```
  - set proxy: modify **/produits/maven/conf/settings.xml**
  ```
 <proxy>
