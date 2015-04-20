@@ -45,7 +45,7 @@ function docker-bash {
 ```
 
 ## Commands
-- Start
+*Start*
 ```bash
 service docker start
 ```
@@ -54,12 +54,12 @@ Starting cgconfig service:                                 [  OK  ]
 Starting docker:                                           [  OK  ]
 ```
 
-- Pull image
+*Pull image*
 ```bash
 docker pull centos:centos6
 ```
 
-- Images list
+*Images list*
 ```bash
 docker images
 ```
@@ -68,7 +68,7 @@ REPOSITORY          TAG                 IMAGE ID            CREATED             
 centos              centos6             f6808a3e4d9e        6 weeks ago         215.7 MB
 ```
 
-- Images run
+*Images run*
 ```bash
 docker run -d -it centos:centos6 bash
 ```
@@ -76,7 +76,7 @@ docker run -d -it centos:centos6 bash
 15c424f5c15c9e4f9af55c090c70804b7cd03f043fd3aca00ac63a17ca68c549
 ```
 
-- Container list
+*Container list*
 ```bash
 docker ps
 ```
@@ -85,12 +85,12 @@ CONTAINER ID        IMAGE                   COMMAND             CREATED         
 15c424f5c15c        centos:centos6          "bash"              41 seconds ago      Up 35 seconds                               jolly_kowalevski
 ```
 
-- Container inspect
+*Container inspect*
 ```bash
 docker inspect 15c424f5c15c
 ```
 
-- Container execute
+*Container execute*
 ```bash
 docker exec -it 15c424f5c15c bash
 ```
