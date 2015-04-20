@@ -19,7 +19,7 @@ ln -s apache-ant-1.9.4 ant
 ```
 ### Configuration
 *Set ant path*
-**/etc/profile.d/ant.sh**
+- **/etc/profile.d/ant.sh**
 ```
 pathmunge /produits/ant/bin
 ```
