@@ -1,13 +1,12 @@
-# Jenkins
-
-## Installation (centos6)
-
-### Java 1.7
+# Jenkins requirements
+## OS Centos 6
+## Java 1.7
+### Installation
 ```bash
 yum install java-1.7.0-openjdk-devel
 ```
-
-### Ant 1.9.4
+## Ant 1.9.4
+### Installation
 ```bash
 cd /tmp
 wget http://mirrors.ircam.fr/pub/apache/ant/binaries/apache-ant-1.9.4-bin.zip
@@ -16,11 +15,13 @@ mv apache-ant-1.9.4 /produits/
 cd /produits/
 ln -s apache-ant-1.9.4 ant
 ```
-
+### Configuration
 **/etc/profile.d/ant.sh**
+```
 pathmunge /produits/ant/bin
-
-### Maven 3.2.5
+```
+## Maven 3.2.5
+### Installation
 ```bash
 cd /tmp
 wget http://mirrors.ircam.fr/pub/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip
@@ -29,12 +30,11 @@ mv apache-maven-3.2.5 /produits/
 cd /produits/
 ln -s apache-maven-3.2.5 maven
 ```
-
+### Configuration
 **/etc/profile.d/mvn.sh**
 ```
 pathmunge /produits/maven/bin
 ```
-
 **/produits/maven/conf/settings.xml**
 ```
 <proxy>
@@ -47,10 +47,7 @@ pathmunge /produits/maven/bin
 </proxy>
 ```
 
-## Jenkins
-
-### Requirements
-*Add jenkins repo*
+## Jenkins repo
 **/etc/yum.repos.d/jenkins.repo**
 ```
 [jenkins]
@@ -59,22 +56,28 @@ baseurl=http://pkg.jenkins-ci.org/redhat
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins-ci
 ```
+**Import key**
 ```bash
 rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
 
-### Installation
+# Jenkins installation
 ```bash
 yum install jenkins
 ```
 
-### Start
+# Start
 ```bash
 chkconfig jenkins on
 service jenkins start
 ```
 
-### Firewall nat redirect 80 to 8080*
+# Update
+```bash
+yum update jenkins
+```
+
+# Optional: Firewall nat redirect 80 to 8080
 **/etc/sysconfig/iptables**
 ```
 *filter
