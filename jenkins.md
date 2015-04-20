@@ -1,10 +1,13 @@
 # Jenkins requirements
+
 ## OS Centos 6
+
 ## Java 1.7
 - Installation
 ```bash
 yum install java-1.7.0-openjdk-devel
 ```
+
 ## Ant 1.9.4
 - Installation
 ```bash
@@ -22,6 +25,7 @@ ln -s apache-ant-1.9.4 ant
  ```
 pathmunge /produits/ant/bin
 ```
+
 ## Maven 3.2.5
 - Installation
 ```bash
