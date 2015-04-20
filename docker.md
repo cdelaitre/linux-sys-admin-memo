@@ -19,6 +19,7 @@ mkdir -p /data/tmp
 lvcreate -n lv_docker_data vg_app -L 20G
 lvcreate -n lv_docker_metadata vg_app -L 2G
 dd if=/dev/zero of=/dev/vg_app/lv_docker_metadata bs=1M count=2000
+```
 
 - /etc/sysconfig/docker
 ```
