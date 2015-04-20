@@ -32,7 +32,7 @@ pathmunge /produits/ant/bin
 
 ## Maven 3.2.5
 - Installation
-```bash
+ ```bash
 TARGET=/produits/
 mkdir -p  $TARGET
 cd /tmp
@@ -82,27 +82,23 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins-ci
 ```
 
 - Import key
-
-```bash
+ ```bash
 rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
 
 # Jenkins installation
-
-```bash
+ ```bash
 yum install jenkins
 ```
 
 # Start
-
-```bash
+ ```bash
 chkconfig jenkins on
 service jenkins start
 ```
 
 # Update
-
-```bash
+ ```bash
 yum update jenkins
 ```
 
