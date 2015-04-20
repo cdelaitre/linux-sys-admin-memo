@@ -18,7 +18,7 @@ cd $TARGET
 ln -s apache-ant-1.9.4 ant
 ```
 - Configuration
-**/etc/profile.d/ant.sh**
+ - ant path: create **/etc/profile.d/ant.sh**
 ```
 pathmunge /produits/ant/bin
 ```
