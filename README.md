@@ -1,10 +1,8 @@
-# linux-sys-admin-memo
-Linux System Administration Memo
-
+# Linux System Administration Memo
 - [epel](epel.md)
 - [ansible](ansible.md)
 - [docker](docker.md)
 - [docker-api](docker-api.md)
 - [docker-compose](docker-compose.md)
-- [Jenkins](jenkins.md)
+- [jenkins](jenkins.md)
 - [rsync](rsync.md)
