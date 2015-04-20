@@ -5,6 +5,7 @@
  ```bash
 yum install java-1.7.0-openjdk-devel
 ```
+
 ## Ant 1.9.4
 - Installation
  ```bash
@@ -24,6 +25,7 @@ ln -s apache-ant-1.9.4 ant
  ```
 pathmunge /produits/ant/bin
 ```
+
 ## Maven 3.2.5
 - Installation
  ```bash
@@ -59,6 +61,7 @@ pathmunge /produits/maven/bin
  </proxy>
 <proxies>
 ```
+
 ## Jenkins repo
 - Add **jenkins repo**
 
@@ -74,10 +77,12 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins-ci
  ```bash
 rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
+
 # Jenkins installation
  ```bash
 yum install jenkins
 ```
+
 # Start
  ```bash
 chkconfig jenkins on
