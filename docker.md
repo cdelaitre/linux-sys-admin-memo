@@ -11,12 +11,12 @@ yum install http://mirror.pnl.gov/epel/6/i386/epel-release-6-8.noarch.rpm
 yum install docker-io
 ```
 
-## Configure filesystem
+## Configure storage
 **Assume**
 - vg_data: data volume group
 - lv_data: data logical volume mounted to /data
 
-**Create docker filesystem**
+**Create docker storage**
 ```bash
 mkdir -p /data/docker
 mkdir -p /data/dockertmp
