@@ -1,13 +1,10 @@
 # Jenkins requirements
-
 ## OS Centos 6
-
 ## Java 1.7
 - Installation
  ```bash
 yum install java-1.7.0-openjdk-devel
 ```
-
 ## Ant 1.9.4
 - Installation
  ```bash
@@ -20,16 +17,13 @@ mv apache-ant-1.9.4 $TARGET
 cd $TARGET
 ln -s apache-ant-1.9.4 ant
 ```
-
 - Configuration
-
  - Set **ant path**
 
  Edit `/etc/profile.d/ant.sh`
  ```
 pathmunge /produits/ant/bin
 ```
-
 ## Maven 3.2.5
 - Installation
  ```bash
@@ -42,14 +36,13 @@ mv apache-maven-3.2.5 $TARGET
 cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
-
 - Configuration
  - Set **maven path**
+
  Create `/etc/profile.d/mvn.sh`
  ```
 pathmunge /produits/maven/bin
 ```
-
  - Set **http proxy**
 
  Edit `/produits/maven/conf/settings.xml`
@@ -66,9 +59,7 @@ pathmunge /produits/maven/bin
  </proxy>
 <proxies>
 ```
-
 ## Jenkins repo
-
 - Add **jenkins repo**
 
  Create `/etc/yum.repos.d/jenkins.repo`
@@ -79,17 +70,14 @@ baseurl=http://pkg.jenkins-ci.org/redhat
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins-ci
 ```
-
 - Import key
  ```bash
 rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
-
 # Jenkins installation
  ```bash
 yum install jenkins
 ```
-
 # Start
  ```bash
 chkconfig jenkins on
@@ -102,7 +90,6 @@ yum update jenkins
 ```
 
 # Optional
-
 - Add **firewall nat redirect** 80 to 8080
  
  Edit `/etc/sysconfig/iptables`
