@@ -8,11 +8,13 @@ yum install java-1.7.0-openjdk-devel
 ## Ant 1.9.4
 ### Installation
 ```bash
+TARGET=/produits/
+mkdir -p  $TARGET
 cd /tmp
 wget http://mirrors.ircam.fr/pub/apache/ant/binaries/apache-ant-1.9.4-bin.zip
 unzip apache-ant-1.9.4-bin.zip
-mv apache-ant-1.9.4 /produits/
-cd /produits/
+mv apache-ant-1.9.4 $TARGET
+cd $TARGET
 ln -s apache-ant-1.9.4 ant
 ```
 ### Configuration
@@ -23,11 +25,13 @@ pathmunge /produits/ant/bin
 ## Maven 3.2.5
 ### Installation
 ```bash
+TARGET=/produits/
+mkdir -p  $TARGET
 cd /tmp
 wget http://mirrors.ircam.fr/pub/apache/maven/maven-3/3.2.5/binaries/apache-maven-3.2.5-bin.zip
 unzip apache-maven-3.2.5-bin.zip
-mv apache-maven-3.2.5 /produits/
-cd /produits/
+mv apache-maven-3.2.5 $TARGET
+cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
 ### Configuration
