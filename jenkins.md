@@ -18,6 +18,7 @@ cd $TARGET
 ln -s apache-ant-1.9.4 ant
 ```
 ### Configuration
+*Set ant path*
 **/etc/profile.d/ant.sh**
 ```
 pathmunge /produits/ant/bin
@@ -35,6 +36,7 @@ cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
 ### Configuration
+*Set maven path*
 **/etc/profile.d/mvn.sh**
 ```
 pathmunge /produits/maven/bin
@@ -52,6 +54,7 @@ pathmunge /produits/maven/bin
 ```
 
 ## Jenkins repo
+*Add jenkins repo*
 **/etc/yum.repos.d/jenkins.repo**
 ```
 [jenkins]
@@ -60,7 +63,7 @@ baseurl=http://pkg.jenkins-ci.org/redhat
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins-ci
 ```
-**Import key**
+*Import key*
 ```bash
 rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
@@ -81,7 +84,8 @@ service jenkins start
 yum update jenkins
 ```
 
-# Optional: Firewall nat redirect 80 to 8080
+# Optional
+*Add firewall nat redirect 80 to 8080*
 **/etc/sysconfig/iptables**
 ```
 *filter
