@@ -1,12 +1,12 @@
 # Jenkins requirements
 ## OS Centos 6
 ## Java 1.7
-### Installation
+- Installation
 ```bash
 yum install java-1.7.0-openjdk-devel
 ```
 ## Ant 1.9.4
-### Installation
+- Installation
 ```bash
 TARGET=/produits/
 mkdir -p  $TARGET
@@ -17,14 +17,13 @@ mv apache-ant-1.9.4 $TARGET
 cd $TARGET
 ln -s apache-ant-1.9.4 ant
 ```
-### Configuration
-*Set ant path*
-- **/etc/profile.d/ant.sh**
+- Configuration
+**/etc/profile.d/ant.sh**
 ```
 pathmunge /produits/ant/bin
 ```
 ## Maven 3.2.5
-### Installation
+- Installation
 ```bash
 TARGET=/produits/
 mkdir -p  $TARGET
@@ -35,12 +34,12 @@ mv apache-maven-3.2.5 $TARGET
 cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
-### Configuration
-*Set maven path*
-**/etc/profile.d/mvn.sh**
-```
-pathmunge /produits/maven/bin
-```
+- Configuration
+ - maven path
+ **/etc/profile.d/mvn.sh**
+ ```
+ pathmunge /produits/maven/bin
+ ```
 **/produits/maven/conf/settings.xml**
 ```
 <proxy>
