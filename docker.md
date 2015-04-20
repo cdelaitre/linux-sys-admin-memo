@@ -93,6 +93,19 @@ CONTAINER ID        IMAGE                   COMMAND             CREATED         
 ```bash
 docker inspect 15c424f5c15c
 ```
+```
+[{
+    "AppArmorProfile": "",
+    "Args": [],
+    "Config": {
+...
+ "StartedAt": "2015-04-20T09:13:12.981147554Z"
+    },
+    "Volumes": {},
+    "VolumesRW": {}
+}
+]
+```
 
 **Container execute**
 ```bash
