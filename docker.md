@@ -45,7 +45,7 @@ function docker-bash {
 ```
 
 ## Commands
-*Start*
+**Start**
 ```bash
 service docker start
 ```
