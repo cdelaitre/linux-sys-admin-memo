@@ -1,8 +1,8 @@
 # ANSIBLE
 
 ## Requirements
-- disable rpmforge extra repo
-- if python-paramiko.noarch 0:1.7.6-1.el6.rfx installed => remove it
+- **disable** `rpmforge extra repo`
+- if `python-paramiko.noarch 0:1.7.6-1.el6.rfx` installed => **remove it**
 ```bash
 yum remove python-paramiko
 ```
@@ -29,27 +29,27 @@ ansible 1.8.4
 ```
 
 ## Client Configuration
-- *Assume*
- - hostname:ansibleclient
- - ip:192.168.1.2
+- **Assume**
+ - `hostname`:`ansibleclient`
+ - `ip`:`192.168.1.2`
 
-- **create ansible user**
+- **Create user**: `ansible`
 ```bash
 useradd ansible
 passwd ansible
 ```
 
-- Add ansible rights: modify **/etc/sudoers**
+- **Add ansible rights**: modify `/etc/sudoers`
 ```
 Defaults    !requiretty
 ansible         ALL=(ALL)       NOPASSWD: ALL
 ```
 
 ## Server Configuration
-- *Assume*
- - hostname:ansiblemaster
+- **Assume**
+ - `hostname`:`ansiblemaster`
 
-- **create ansible user,key and copy to client**
+- **Create ansible user,key and copy to client**:
 ```bash
 useradd ansible
 su - ansible
@@ -57,12 +57,12 @@ ssh-keygen -t rsa -C "ansible@ansiblemaster"
 ssh-copy-id ansibleclient
 ```
 
-- Add ansible rights: modify **/etc/sudoers**
+- **Add ansible rights**: modify `/etc/sudoers`
 ```
 Defaults    !requiretty
 ```
 
-- Add environment variables: modify **/etc/ansible/hosts**
+- **Add environment variables**: modify `/etc/ansible/hosts`
 ```
 [env:vars]
 ansible_ssh_user=ansible
