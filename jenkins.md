@@ -39,7 +39,7 @@ ln -s apache-maven-3.2.5 maven
  ```
  pathmunge /produits/maven/bin
  ```
- - set proxy: **/produits/maven/conf/settings.xml**
+ - set proxy: modify **/produits/maven/conf/settings.xml**
  ```
 <proxy>
   <id>proxy-corp</id>
