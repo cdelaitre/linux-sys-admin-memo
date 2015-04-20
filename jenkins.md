@@ -35,13 +35,12 @@ cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
 - Configuration
- - maven path
- **/etc/profile.d/mvn.sh**
+ - maven path: create **/etc/profile.d/mvn.sh**
  ```
  pathmunge /produits/maven/bin
  ```
-**/produits/maven/conf/settings.xml**
-```
+ - set proxy: **/produits/maven/conf/settings.xml**
+ ```
 <proxy>
   <id>proxy-corp</id>
   <active>true</active>
@@ -53,8 +52,7 @@ ln -s apache-maven-3.2.5 maven
 ```
 
 ## Jenkins repo
-*Add jenkins repo*
-**/etc/yum.repos.d/jenkins.repo**
+- Add jenkins repo: create **/etc/yum.repos.d/jenkins.repo**
 ```
 [jenkins]
 name=Jenkins
@@ -62,7 +60,7 @@ baseurl=http://pkg.jenkins-ci.org/redhat
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-jenkins-ci
 ```
-*Import key*
+- Import key
 ```bash
 rpm --import http://pkg.jenkins-ci.org/redhat/jenkins-ci.org.key
 ```
@@ -84,8 +82,7 @@ yum update jenkins
 ```
 
 # Optional
-*Add firewall nat redirect 80 to 8080*
-**/etc/sysconfig/iptables**
+- Add firewall nat redirect 80 to 8080: modify **/etc/sysconfig/iptables**
 ```
 *filter
 ...
