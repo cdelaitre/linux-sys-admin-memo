@@ -5,4 +5,5 @@
 - [docker-api](docker-api.md)
 - [docker-compose](docker-compose.md)
 - [jenkins](jenkins.md)
+- [artifactory](artifactory.md)
 - [rsync](rsync.md)
