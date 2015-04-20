@@ -114,3 +114,8 @@ docker exec -it 15c424f5c15c bash
 ```
 [root@15c424f5c15c /]#
 ```
+
+**Container stop**
+```bash
+docker stop 15c424f5c15c
+```
