@@ -40,7 +40,9 @@ cd $TARGET
 ln -s apache-maven-3.2.5 maven
 ```
 - Configuration
-Set **maven path**: create `/etc/profile.d/mvn.sh`
+Set **maven path**:
+
+Create `/etc/profile.d/mvn.sh`
 ```
 pathmunge /produits/maven/bin
 ```
