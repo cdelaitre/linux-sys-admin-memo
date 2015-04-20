@@ -1,7 +1,7 @@
 # Docker
 ## Requirements
 - Linux Kernel >= 2.6.32-431
-- Install [epel repo](epel.md)
+- Add [EPEL repo](epel.md)
 
 ## Installation (centos6)
 ```bash
