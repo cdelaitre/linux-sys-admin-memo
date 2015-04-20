@@ -6,4 +6,5 @@ Linux System Administration Memo
 - [docker](docker.md)
 - [docker-api](docker-api.md)
 - [docker-compose](docker-compose.md)
+- [Jenkins](jenkins.md)
 - [rsync](rsync.md)
