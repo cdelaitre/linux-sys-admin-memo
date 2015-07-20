@@ -3,7 +3,9 @@
 - Linux Kernel >= 2.6.32-431
 - Add [EPEL repo](epel.md)
 
-- Prepare docker storage /data/docker on vg vg_data
+- Prepare docker storage
+  - Directory /data/dockervg
+  - Volume group : vg_data
 ```bash
 mkdir -p /data/docker
 lvcreate -n lv_docker_data vg_data -L 20G
@@ -27,7 +29,7 @@ curl -O -sSL https://get.docker.com/rpm/1.7.1/centos-6/RPMS/x86_64/docker-engine
 yum localinstall --nogpgcheck docker-engine-1.7.1-1.el6.x86_64.rpm
 ```
 
-# Start on boot
+## Start on boot
 ```bash
 chkconfig docker on
 ```
