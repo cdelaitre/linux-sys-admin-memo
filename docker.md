@@ -63,10 +63,14 @@ docker pull centos:centos6
 ```
 
 **Save**
+```bash
 docker save centos:centos6 > /tmp/dockerimage-centos_centos6.tar
+```
 
 **Load**
+```bash
 docker load < /tmp/dockerimage-centos_centos6.tar
+```
 
 **List**
 ```bash
