@@ -3,14 +3,14 @@
 - Linux Kernel >= 2.6.32-431
 - Add [EPEL repo](epel.md)
 
-**Prepare docker storage /data/docker on vg vg_data **
+- Prepare docker storage /data/docker on vg vg_data
 ```bash
 mkdir -p /data/docker
 lvcreate -n lv_docker_data vg_data -L 20G
 lvcreate -n lv_docker_metadata vg_data -L 2G
 ```
 
-**Create tool /usr/local/bin/docker-bash**
+- Create tool /usr/local/bin/docker-bash
 ```bash
 vi /usr/local/bin/docker-bash
 
