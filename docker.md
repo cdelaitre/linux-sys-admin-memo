@@ -14,13 +14,14 @@ lvcreate -n lv_docker_metadata vg_data -L 2G
 ```
 
 - Create tool /usr/local/bin/docker-bash
+  - touch /usr/local/bin/docker-bash
+  - chmod +x /usr/local/bin/docker-bash
   - vi /usr/local/bin/docker-bash
 ```bash
 #!/bin/bash
 CONTAINER=$1
 docker exec -it ${CONTAINER} /bin/bash
 ```
-  - chmod +x /usr/local/bin/docker-bash
 
 ## Installation Docker 1.7.1 (centos6)
 ```bash
