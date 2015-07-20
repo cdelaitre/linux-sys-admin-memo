@@ -4,8 +4,9 @@
 - Add [EPEL repo](epel.md)
 
 - Prepare docker storage
-  - Directory /data/dockervg
+  - Directory /data/docker
   - Volume group : vg_data
+  - Logical volumes : lv_docker_data, lv_docker_metadata
 ```bash
 mkdir -p /data/docker
 lvcreate -n lv_docker_data vg_data -L 20G
@@ -13,15 +14,13 @@ lvcreate -n lv_docker_metadata vg_data -L 2G
 ```
 
 - Create tool /usr/local/bin/docker-bash
+  - vi /usr/local/bin/docker-bash
 ```bash
-vi /usr/local/bin/docker-bash
-
 #!/bin/bash
 CONTAINER=$1
 docker exec -it ${CONTAINER} /bin/bash
-
-chmod +x /usr/local/bin/docker-bash
 ```
+  - chmod +x /usr/local/bin/docker-bash
 
 ## Installation Docker 1.7.1 (centos6)
 ```bash
