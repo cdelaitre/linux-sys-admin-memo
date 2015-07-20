@@ -39,18 +39,6 @@ chkconfig docker on
 usermod -aG docker __username__
 ```
 
-## Configure storage
-**Assume**
-- vg_data: data volume group
-- lv_data: data logical volume mounted to /data
-- docker local tool :
-```bash
-cat /usr/local/bin/docker-bash
-#!/bin/bash
-CONTAINER=$1
-docker exec -it ${CONTAINER} /bin/bash
-```
-
 **/etc/sysconfig/docker**
 ```
 other_args="-g /data/docker -H tcp://0.0.0.0:52099 -H unix:///var/run/docker.sock"
@@ -83,9 +71,6 @@ docker load < /tmp/dockerimage-centos_centos6.tar
 **List**
 ```bash
 docker images
-```
-```
-[admcdela@acdevjenkins:~]# docker images
 REPOSITORY                 TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 cdelaitre/centos-tomcat    8                   92d7bd94c08b        4 days ago          438.8 MB
 cdelaitre/centos-tomcat    7                   c5f381c14470        4 days ago          465 MB
@@ -160,7 +145,7 @@ docker run -d -it --name redmine -p 80:80 -v /data/redminemysql:/var/lib/mysql -
 docker ps
 
 CONTAINER ID        IMAGE                       COMMAND                CREATED             STATUS              PORTS                             NAMES
-72d260f1ac7f        i3p_ci/redmine:latest       "bash"                 2 weeks ago         Up 2 weeks          0.0.0.0:80->80/tcp             adoring_hopper    
+72d260f1ac7f        i3p_ci/redmine:latest       "bash"                 2 weeks ago         Up 2 weeks          0.0.0.0:80->80/tcp             redmine    
 
 docker-bash 72d260f1ac7f
 [root@72d260f1ac7f /]# service mysqld start
@@ -174,7 +159,7 @@ httpd started
 docker ps
 
 CONTAINER ID        IMAGE                       COMMAND                CREATED             STATUS              PORTS                             NAMES
-72d260f1ac7f        i3p_ci/redmine:latest       "bash"                 2 weeks ago         Up 2 weeks          0.0.0.0:80->80/tcp             adoring_hopper    
+72d260f1ac7f        i3p_ci/redmine:latest       "bash"                 2 weeks ago         Up 2 weeks          0.0.0.0:80->80/tcp             redmine    
 
 docker-bash 72d260f1ac7f
 [root@72d260f1ac7f /]# service httpd stop
