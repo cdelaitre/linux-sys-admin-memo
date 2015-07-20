@@ -64,12 +64,12 @@ docker pull centos:centos6
 
 **Save**
 ```bash
-docker save centos:centos6 > /tmp/dockerimage-centos_centos6.tar
+docker save centos:centos6 | gzip > /tmp/dockerimage-centos_centos6.tar.gz
 ```
 
 **Load**
 ```bash
-docker load < /tmp/dockerimage-centos_centos6.tar
+docker load -i /tmp/dockerimage-centos_centos6.tar.gz
 ```
 
 **List**
